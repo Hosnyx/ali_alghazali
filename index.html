@@ -10,45 +10,68 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+
 body{
-min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
-background-size:400% 400%;animation:bgMove 12s ease infinite;
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
 }
+
 @keyframes bgMove{
 0%{background-position:0% 50%}
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
+
 .card{
-width:100%;max-width:560px;padding:35px;border-radius:30px;text-align:center;
-background:rgba(255,255,255,.08);backdrop-filter:blur(20px);
+width:100%;
+max-width:550px;
+padding:35px;
+border-radius:30px;
+text-align:center;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.08);
 border:1px solid rgba(255,255,255,.1);
 box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
+
 .logo{
-width:150px;height:150px;border-radius:50%;
-object-fit:cover;border:4px solid #FFD700;margin-bottom:15px;
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #FFD700;
+margin-bottom:15px;
 }
+
 h1{color:#fff;font-size:32px}
 .gold{color:#FFD700}
-.desc{color:#cbd5e1;margin:15px 0 25px;line-height:1.8}
+
+.desc{
+color:#cbd5e1;
+margin:15px 0 25px;
+line-height:1.8;
+}
+
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:10px;
 margin-bottom:25px;
 }
+
 .stat{
 background:rgba(255,255,255,.06);
 padding:12px;
 border-radius:15px;
 color:#fff;
 }
-.stat strong{
-font-size:22px;
-color:#FFD700;
-}
+
 .video-box{
 margin-bottom:25px;
 padding:20px;
@@ -57,12 +80,14 @@ background:rgba(255,255,255,.05);
 border:2px solid #FFD700;
 box-shadow:0 0 25px rgba(255,215,0,.15);
 }
+
 .video-title{
 font-size:22px;
 font-weight:800;
 color:#FFD700;
 margin-bottom:15px;
 }
+
 .video-frame{
 position:relative;
 width:100%;
@@ -71,20 +96,48 @@ overflow:hidden;
 border-radius:18px;
 border:3px solid #FFD700;
 }
+
 .video-frame iframe{
 position:absolute;
-top:0;left:0;width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 }
-.links{display:flex;flex-direction:column;gap:12px}
+
+.links{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
 .btn{
-text-decoration:none;color:#fff;padding:14px 18px;border-radius:18px;
-display:flex;align-items:center;gap:15px;font-weight:700;transition:.3s;
+text-decoration:none;
+color:#fff;
+padding:14px 18px;
+border-radius:18px;
+display:flex;
+align-items:center;
+gap:15px;
+font-weight:700;
+transition:.3s;
 }
-.btn:hover{transform:translateY(-4px) scale(1.02)}
+
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+}
+
 .btn i{
-width:48px;height:48px;border-radius:50%;
-background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
+width:48px;
+height:48px;
+border-radius:50%;
+background:#fff;
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
 }
+
 .facebook{background:#1877f2}
 .instagram{background:linear-gradient(135deg,#ff0069,#ff7a00)}
 .youtube{background:#ff0000}
@@ -92,21 +145,33 @@ background:#fff;color:#111;display:flex;align-items:center;justify-content:cente
 .snapchat{background:#FFD700;color:#111}
 .x{background:#000}
 .email{background:#7c3aed}
-.footer{margin-top:25px;color:#94a3b8;font-size:13px}
-.designer{
-display:inline-block;margin-top:12px;text-decoration:none;
-font-size:16px;font-weight:700;color:#FFD700;
+
+.footer{
+margin-top:25px;
+color:#94a3b8;
+font-size:13px;
 }
+
+.designer{
+display:inline-block;
+margin-top:12px;
+text-decoration:none;
+font-size:16px;
+font-weight:700;
+color:#FFD700;
+}
+
 @media(max-width:600px){
 .stats{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
+
 <body>
 
 <div class="card">
 
-<img class="logo" src="https://raw.githubusercontent.com/Hosnyx/ali_alghazali/refs/heads/main/ChatGPT%20Image%2012%20%D9%8A%D9%88%D9%86%D9%8A%D9%88%202026%D8%8C%2008_41_54%20%D9%85.webp" alt="Ali Alghzali">
+<img class="logo" src="https://raw.githubusercontent.com/Hosnyx/ali_alghzali/refs/heads/main/ChatGPT%20Image%2012%20%D9%8A%D9%88%D9%86%D9%8A%D9%88%202026%D8%8C%2008_41_54%20%D9%85.webp" alt="Ali">
 
 <h1>🥋 <span class="gold">الكابتن علي الغزالي</span></h1>
 
@@ -116,37 +181,53 @@ font-size:16px;font-weight:700;color:#FFD700;
 
 <div class="stats">
 <div class="stat"><strong>15+</strong><br>خبرة</div>
-<div class="stat"><strong>1500+</strong><br>لاعب</div>
-<div class="stat"><strong>75+</strong><br>بطولة</div>
+<div class="stat"><strong>500+</strong><br>متدرب</div>
+<div class="stat"><strong>100%</strong><br>احترافية</div>
 <div class="stat"><strong id="visitors">0</strong><br>زائر</div>
 </div>
 
 <div class="video-box">
-    <div class="video-title">
-        🎥 الفيديو التعريفي
-    </div>
-
-    <div class="video-frame">
-        <iframe
-            src="https://www.youtube.com/embed/nmi79kfgjTA?si=-SdmBnIcTGPY8lZb"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="video-title">🎥 الفيديو التعريفي</div>
+<div class="video-frame">
+<iframe width="1059" height="595" src="https://www.youtube.com/embed/2QYxXgEgknI" 
+title="Discover Yourself through Taekwondo l 태권도 광고" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen></iframe>
 </div>
 </div>
 
 <div class="links">
-<a href="https://wa.me/966595076560" class="btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i>واتساب</a>
-<a href="https://www.facebook.com/profile.php?id=61590650885238" class="btn facebook" target="_blank"><i class="fab fa-facebook-f"></i>فيسبوك</a>
-<a href="https://www.instagram.com/ali_alghzali_coach/" class="btn instagram" target="_blank"><i class="fab fa-instagram"></i>إنستجرام</a>
-<a href="https://www.youtube.com/@ali_alghzali_coach" class="btn youtube" target="_blank"><i class="fab fa-youtube"></i>يوتيوب</a>
-<a href="https://www.snapchat.com/@ali.alghzali" class="btn snapchat" target="_blank"><i class="fab fa-snapchat"></i>سناب شات</a>
-<a href="https://x.com/ali_alghzali_co" class="btn x" target="_blank"><i class="fab fa-x-twitter"></i>X</a>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=captain.ali.alghzali@gmail.com" class="btn email" target="_blank"><i class="fas fa-envelope"></i>إرسال بريد إلكتروني</a>
+
+<a href="https://wa.me/966595076560" class="btn whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>واتساب
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61590650885238" class="btn facebook" target="_blank">
+<i class="fab fa-facebook-f"></i>فيسبوك
+</a>
+
+<a href="https://www.instagram.com/ali_alghzali_coach/" class="btn instagram" target="_blank">
+<i class="fab fa-instagram"></i>إنستجرام
+</a>
+
+<a href="https://www.youtube.com/@ali_alghzali_coach" class="btn youtube" target="_blank">
+<i class="fab fa-youtube"></i>يوتيوب
+</a>
+
+<a href="https://www.snapchat.com/@ali.alghzali" class="btn snapchat" target="_blank">
+<i class="fab fa-snapchat"></i>سناب شات
+</a>
+
+<a href="https://x.com/ali_alghzali_co" class="btn x" target="_blank">
+<i class="fab fa-x-twitter"></i>X
+</a>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=captain.ali.alghzali@gmail.com" class="btn email" target="_blank">
+<i class="fas fa-envelope"></i>إرسال بريد إلكتروني
+</a>
+
 </div>
 
 <div class="footer">
