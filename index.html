@@ -1,186 +1,137 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خير بلدنا | روابط التواصل</title>
+<title>الكابتن علي الغزالي | روابط التواصل</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Cairo',sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
-    background-size:400% 400%;
-    animation:bgMove 12s ease infinite;
+min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;
+background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
+background-size:400% 400%;animation:bgMove 12s ease infinite;
 }
-
 @keyframes bgMove{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
-
 .card{
-    width:100%;
-    max-width:450px;
-    padding:35px;
-    border-radius:30px;
-    text-align:center;
-    backdrop-filter:blur(20px);
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 20px 40px rgba(0,0,0,.4);
+width:100%;max-width:560px;padding:35px;border-radius:30px;text-align:center;
+background:rgba(255,255,255,.08);backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
-
 .logo{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid rgba(255,255,255,.2);
-    margin-bottom:15px;
+width:150px;height:150px;border-radius:50%;
+object-fit:cover;border:4px solid #FFD700;margin-bottom:15px;
 }
-
-h1{
-    color:#fff;
-    font-size:30px;
-    margin-bottom:10px;
+h1{color:#fff;font-size:32px}
+.gold{color:#FFD700}
+.desc{color:#cbd5e1;margin:15px 0 25px;line-height:1.8}
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-bottom:25px;
 }
-
-.desc{
-    color:#cbd5e1;
-    margin-bottom:30px;
-    line-height:1.8;
+.stat{
+background:rgba(255,255,255,.06);
+padding:12px;
+border-radius:15px;
+color:#fff;
 }
-
-.links{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.stat strong{
+font-size:22px;
+color:#FFD700;
 }
-
+.video-box{
+margin-bottom:25px;
+padding:20px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+border:2px solid #FFD700;
+box-shadow:0 0 25px rgba(255,215,0,.15);
+}
+.video-title{
+font-size:22px;
+font-weight:800;
+color:#FFD700;
+margin-bottom:15px;
+}
+.video-frame{
+position:relative;
+width:100%;
+padding-bottom:56.25%;
+overflow:hidden;
+border-radius:18px;
+border:3px solid #FFD700;
+}
+.video-frame iframe{
+position:absolute;
+top:0;left:0;width:100%;height:100%;
+}
+.links{display:flex;flex-direction:column;gap:12px}
 .btn{
-    text-decoration:none;
-    color:white;
-    padding:14px 18px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    font-size:17px;
-    font-weight:700;
-    transition:0.3s;
+text-decoration:none;color:#fff;padding:14px 18px;border-radius:18px;
+display:flex;align-items:center;gap:15px;font-weight:700;transition:.3s;
 }
-
-.btn:hover{
-    transform:translateY(-4px) scale(1.02);
-}
-
+.btn:hover{transform:translateY(-4px) scale(1.02)}
 .btn i{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:#fff;
-    color:#111;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    flex-shrink:0;
+width:48px;height:48px;border-radius:50%;
+background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
 }
-
-.btn span{
-    flex:1;
-    text-align:center;
-    margin-left:48px;
-}
-
-.facebook{
-    background:linear-gradient(135deg,#1877f2,#0d47a1);
-}
-
-.instagram{
-    background:linear-gradient(135deg,#ff0069,#ff7a00);
-}
-
-.tiktok{
-    background:linear-gradient(135deg,#000,#333);
-}
-
-.whatsapp{
-    background:linear-gradient(135deg,#25d366,#128c7e);
-}
-
-.youtube{
-    background:linear-gradient(135deg,#ff0000,#c62828);
-}
-
-.website{
-    background:linear-gradient(135deg,#7c3aed,#4f46e5);
-}
-
-.cv{
-    background:linear-gradient(135deg,#f59e0b,#d97706);
-}    
-    
-.footer{
-    margin-top:25px;
-    color:#94a3b8;
-    font-size:13px;
-}
-
+.facebook{background:#1877f2}
+.instagram{background:linear-gradient(135deg,#ff0069,#ff7a00)}
+.youtube{background:#ff0000}
+.whatsapp{background:#25d366}
+.snapchat{background:#FFD700;color:#111}
+.x{background:#000}
+.email{background:#7c3aed}
+.tiktok{background:linear-gradient(135deg,#000,#25F4EE,#FE2C55)}
+.footer{margin-top:25px;color:#94a3b8;font-size:13px}
 .designer{
-    display:inline-block;
-    margin-top:12px;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:700;
-    color:#FFD700;
-    transition:all .3s ease;
-    text-shadow:0 0 10px rgba(255,215,0,.7);
+display:inline-block;margin-top:12px;text-decoration:none;
+font-size:16px;font-weight:700;color:#FFD700;
 }
-
-.designer:hover{
-    color:#ffffff;
-    transform:scale(1.08);
-    text-shadow:
-        0 0 10px #FFD700,
-        0 0 20px #FFD700,
-        0 0 30px #FFD700;
+@media(max-width:600px){
+.stats{grid-template-columns:repeat(2,1fr)}
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="card">
 
-```
-<!-- رابط الشعار -->
-<img src="https://github.com/Hosnyx/my-links/blob/main/Picsart_26-06-06_22-06-20-506.webp?raw=true" alt="Logo" class="logo">
+<img class="logo" src="https://raw.githubusercontent.com/Hosnyx/ali_alghazali/refs/heads/main/ChatGPT%20Image%2012%20%D9%8A%D9%88%D9%86%D9%8A%D9%88%202026%D8%8C%2008_41_54%20%D9%85.webp" alt="Ali Alghzali">
 
-<h1>خير بلدنا</h1>
+<h1>🥋 <span class="gold">الكابتن علي الغزالي</span></h1>
 
 <p class="desc">
-    مرحباً بك 👋<br>
-    تابعنا على جميع منصات التواصل الاجتماعي
+مدرب تايكوندو | لياقة بدنية | إعداد بدني
 </p>
+
+<div class="stats">
+<div class="stat"><strong>15+</strong><br>خبرة</div>
+<div class="stat"><strong>1500+</strong><br>لاعب</div>
+<div class="stat"><strong>75+</strong><br>بطولة</div>
+<div class="stat"><strong id="visitors">0</strong><br>زائر</div>
+</div>
+
+<div class="video-box">
+<div class="video-title">🎥 الفيديو التعريفي</div>
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/2QYxXgEgknI"
+title="Captain Ali Video"
+frameborder="0"
+allowfullscreen></iframe>
+</div>
+</div>
 
 <div class="links">
 
@@ -189,53 +140,58 @@ h1{
     <span>السيرة الذاتية CV</span>
 </a>
     
-    <a href="https://facebook.com/yourpage" class="btn facebook" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-        <span>فيسبوك</span>
-    </a>
+<a href="https://wa.me/966595076560?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87%20%D9%83%D8%A7%D8%A8%D8%AA%D9%86%20%D8%B9%D9%84%D9%8A%D8%8C%0A%0A%D8%A3%D8%AA%D9%85%D9%86%D9%89%20%D8%A3%D9%86%20%D8%AA%D9%83%D9%88%D9%86%20%D8%A8%D8%AE%D9%8A%D8%B1.%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%B6%D9%85%D8%A7%D9%85%20%D9%84%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%85%D8%B9%D9%83%D9%85%D8%8C%20%D9%88%D8%A3%D8%AA%D8%B7%D9%84%D8%B9%20%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%88%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B9%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9.%0A%0A%D9%85%D8%B9%20%D8%AE%D8%A7%D9%84%D8%B5%20%D8%A7%D9%84%D8%B4%D9%83%D8%B1%20%D9%88%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%8A%D8%B1."
+class="btn whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>واتساب
+</a>
 
-    <a href="https://instagram.com/yourpage" class="btn instagram" target="_blank">
-        <i class="fab fa-instagram"></i>
-        <span>إنستجرام</span>
-    </a>
+<a href="https://www.facebook.com/profile.php?id=61590650885238" class="btn facebook" target="_blank">
+<i class="fab fa-facebook-f"></i>فيسبوك
+</a>
 
-    <a href="https://tiktok.com/@yourpage" class="btn tiktok" target="_blank">
-        <i class="fab fa-tiktok"></i>
-        <span>تيك توك</span>
-    </a>
+<a href="https://www.instagram.com/ali_alghzali_coach/" class="btn instagram" target="_blank">
+<i class="fab fa-instagram"></i>إنستجرام
+</a>
 
-    <a href="https://wa.me/201273640997" class="btn whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>واتساب</span>
-    </a>
+<a href="https://www.youtube.com/@ali_alghzali_coach" class="btn youtube" target="_blank">
+<i class="fab fa-youtube"></i>يوتيوب
+</a>
 
-    <a href="https://youtube.com/@yourchannel" class="btn youtube" target="_blank">
-        <i class="fab fa-youtube"></i>
-        <span>يوتيوب</span>
-    </a>
+<a href="https://www.snapchat.com/@ali.alghzali" class="btn snapchat" target="_blank">
+<i class="fab fa-snapchat"></i>سناب شات
+</a>
 
-    <a href="https://yourwebsite.com" class="btn website" target="_blank">
-        <i class="fas fa-globe"></i>
-        <span>الموقع الإلكتروني</span>
-    </a>
+<a href="https://x.com/ali_alghzali_co" class="btn x" target="_blank">
+<i class="fab fa-x-twitter"></i>X
+</a>
+<a href="https://www.tiktok.com/@ghazalysport2?_r=1&_t=ZS-979l7nSBYX4" class="btn tiktok" target="_blank">
+<i class="fab fa-tiktok"></i>تيك توك
+</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=captain.ali.alghzali@gmail.com"
+class="btn email" target="_blank">
+<i class="fas fa-envelope"></i>إرسال بريد إلكتروني
+</a>
 
 </div>
 
 <div class="footer">
-    © 2026 جميع الحقوق محفوظة
-
-    <br><br>
-
-    <a href="https://api.whatsapp.com/send?phone=201064654324&text=مرحباً%20المهندس%20حسني%20رشاد،%20أرغب%20في%20تصميم%20موقع%20أو%20متجر"
+© 2026 جميع الحقوق محفوظة
+<br><br>
+<a href="https://api.whatsapp.com/send?phone=201064654324&text=مرحباً%20المهندس%20حسني%20رشاد،%20أرغب%20في%20تصميم%20موقع%20أو%20متجر"
    target="_blank"
    class="designer">
    ✨ تصميم المهندس حسني رشاد
 </a>
-    
 </div>
-```
 
 </div>
+
+<script>
+let count=localStorage.getItem('site_visits')||0;
+count++;
+localStorage.setItem('site_visits',count);
+document.getElementById('visitors').innerText=count;
+</script>
 
 </body>
 </html>
