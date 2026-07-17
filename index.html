@@ -330,32 +330,36 @@ const db = getFirestore(app);
 async function loadClicks() {
 
   const names = [
-    "cv",
-    "whatsapp",
-    "facebook",
-    "instagram",
-    "youtube",
-    "snapchat",
-    "x",
-    "tiktok",
-    "email"
-  ];
+"cv",
+"whatsapp",
+"facebook",
+"instagram",
+"youtube",
+"snapchat",
+"x",
+"tiktok",
+"email"
+];
 
-  for (const name of names) {
+async function loadClicks(){
 
-    const snap = await getDoc(doc(db, "clicks", name));
+for(const name of names){
 
-    if (snap.exists()) {
+const ref = doc(db,"clicks",name);
 
-      const el = document.getElementById("count-" + name);
+const snap = await getDoc(ref);
 
-      if (el) {
-        el.innerText = snap.data().count + "+";
-      }
+if(snap.exists()){
 
-    }
+const el = document.getElementById("count-"+name);
 
-  }
+if(el){
+el.innerText = snap.data().count + "+";
+}
+
+}
+
+}
 
 }
 
