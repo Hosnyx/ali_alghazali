@@ -316,7 +316,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyBgXvi7GAJaJK9JguyUpQ-IoeB8WkJFvF0",
   authDomain: "ali-alghazali.firebaseapp.com",
   projectId: "ali-alghazali",
   storageBucket: "ali-alghazali.firebasestorage.app",
@@ -330,70 +330,62 @@ const db = getFirestore(app);
 async function loadClicks() {
 
   const names = [
-"cv",
-"whatsapp",
-"facebook",
-"instagram",
-"youtube",
-"snapchat",
-"x",
-"tiktok",
-"email"
-];
+    "cv",
+    "whatsapp",
+    "facebook",
+    "instagram",
+    "youtube",
+    "snapchat",
+    "x",
+    "tiktok",
+    "email"
+  ];
 
-async function loadClicks(){
+  for (const name of names) {
 
-for(const name of names){
+    const ref = doc(db, "clicks", name);
+    const snap = await getDoc(ref);
 
-const ref = doc(db,"clicks",name);
+    if (snap.exists()) {
+      const el = document.getElementById("count-" + name);
 
-const snap = await getDoc(ref);
-
-if(snap.exists()){
-
-const el = document.getElementById("count-"+name);
-
-if(el){
-el.innerText = snap.data().count + "+";
+      if (el) {
+        el.innerText = snap.data().count + "+";
+      }
+    }
+  }
 }
 
-}
+window.countClick = async function(name) {
 
-}
+  const ref = doc(db, "clicks", name);
 
-}
-
-window.countClick = async function(name){
-
-  const ref = doc(db,"clicks",name);
-
-  await updateDoc(ref,{
-      count:increment(1)
+  await updateDoc(ref, {
+    count: increment(1)
   });
 
   const snap = await getDoc(ref);
 
-  const el=document.getElementById("count-"+name);
+  const el = document.getElementById("count-" + name);
 
-  if(el){
-      el.innerText=snap.data().count+"+";
+  if (el) {
+    el.innerText = snap.data().count + "+";
   }
+};
 
-}
+const visitRef = doc(db, "stats", "visits");
 
-const visitRef = doc(db,"stats","visits");
-
-await updateDoc(visitRef,{
-    count:increment(1)
+await updateDoc(visitRef, {
+  count: increment(1)
 });
 
 const visitSnap = await getDoc(visitRef);
 
-document.getElementById("visitors").innerText =
-visitSnap.data().count;
+document.getElementById("visitors").innerText = visitSnap.data().count;
 
 await loadClicks();
 
+  
      </script>
     
 </body>
