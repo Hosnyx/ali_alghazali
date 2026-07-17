@@ -194,11 +194,18 @@ class="btn email" target="_blank">
 </div>
 
 <script>
-let count=localStorage.getItem('site_visits')||0;
-count++;
-localStorage.setItem('site_visits',count);
-document.getElementById('visitors').innerText=count;
-</script>
+const namespace = "hosnyx";
+const key = "ali-alghazali-profile";
 
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("visitors").innerText = data.value;
+  })
+  .catch(error => {
+    console.error(error);
+    document.getElementById("visitors").innerText = "--";
+  });
+</script>
 </body>
 </html>
