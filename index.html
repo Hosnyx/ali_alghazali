@@ -126,9 +126,6 @@ min-width:55px;
 text-align:center;
 box-shadow:0 2px 8px rgba(0,0,0,.2);
 }
-width:48px;height:48px;border-radius:50%;
-background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
-}
 .facebook{background:#1877f2}
 .instagram{background:linear-gradient(135deg,#ff0069,#ff7a00)}
 .youtube{background:#ff0000}
@@ -191,8 +188,11 @@ allowfullscreen>
 class="btn cv"
 target="_blank"
 onclick="countClick('cv')">
-    <i class="fas fa-file-alt"></i>
-    <span>السيرة الذاتية CV</span>
+<div class="left">
+<i class="fas fa-file-alt"></i>
+<span>السيرة الذاتية CV</span>
+</div>
+<span class="counter" id="count-cv">0+</span>
 </a>
 
 <a href="https://wa.me/966595076560?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87%20%D9%83%D8%A7%D8%A8%D8%AA%D9%86%20%D8%B9%D9%84%D9%8A%D8%8C%0A%0A%D8%A3%D8%AA%D9%85%D9%86%D9%89%20%D8%A3%D9%86%20%D8%AA%D9%83%D9%88%D9%86%20%D8%A8%D8%AE%D9%8A%D8%B1.%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%B6%D9%85%D8%A7%D9%85%20%D9%84%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%85%D8%B9%D9%83%D9%85%D8%8C%20%D9%88%D8%A3%D8%AA%D8%B7%D9%84%D8%B9%20%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%88%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B9%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9.%0A%0A%D9%85%D8%B9%20%D8%AE%D8%A7%D9%84%D8%B5%20%D8%A7%D9%84%D8%B4%D9%83%D8%B1%20%D9%88%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%8A%D8%B1."
@@ -215,14 +215,22 @@ onclick="countClick('whatsapp')">
 class="btn facebook"
 target="_blank"
 onclick="countClick('facebook')">
-<i class="fab fa-facebook-f"></i>فيسبوك
+<div class="left">
+<i class="fab fa-facebook-f"></i>
+<span>فيسبوك</span>
+</div>
+<span class="counter" id="count-facebook">0+</span>
 </a>
 
 <a href="https://www.instagram.com/ali_alghzali_coach/"
 class="btn instagram"
 target="_blank"
 onclick="countClick('instagram')">
-<i class="fab fa-instagram"></i>إنستجرام
+<div class="left">
+<i class="fab fa-instagram"></i>
+<span>إنستجرام</span>
+</div>
+<span class="counter" id="count-instagram">0+</span>
 </a>
 
 <a href="https://www.youtube.com/@ali_alghzali_coach"
@@ -236,28 +244,44 @@ onclick="countClick('youtube')">
 class="btn snapchat"
 target="_blank"
 onclick="countClick('snapchat')">
-<i class="fab fa-snapchat"></i>سناب شات
+<div class="left">
+<i class="fab fa-snapchat"></i>
+<span>سناب شات</span>
+</div>
+<span class="counter" id="count-snapchat">0+</span>
 </a>
 
 <a href="https://x.com/ali_alghzali_co"
 class="btn x"
 target="_blank"
 onclick="countClick('x')">
-<i class="fab fa-x-twitter"></i>X
+<div class="left">
+<i class="fab fa-x-twitter"></i>
+<span>X</span>
+</div>
+<span class="counter" id="count-x">0+</span>
 </a>
 
 <a href="https://www.tiktok.com/@ghazalysport2?_r=1&_t=ZS-983pvhzWtb5"
 class="btn tiktok"
 target="_blank"
 onclick="countClick('tiktok')">
-<i class="fab fa-tiktok"></i>تيك توك
+<div class="left">
+<i class="fab fa-tiktok"></i>
+<span>تيك توك</span>
+</div>
+<span class="counter" id="count-tiktok">0+</span>
 </a>
 
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=captain.ali.alghzali@gmail.com"
 class="btn email"
 target="_blank"
 onclick="countClick('email')">
-<i class="fas fa-envelope"></i>إرسال بريد إلكتروني
+<div class="left">
+<i class="fas fa-envelope"></i>
+<span>إرسال بريد إلكتروني</span>
+</div>
+<span class="counter" id="count-email">0+</span>
 </a>
 
 </div>
@@ -330,12 +354,15 @@ el.innerText=snap.data().count+"+";
 }
 
 window.loadClicks=loadClicks;
-    window.countClick = async function(name) {
-  try {
-    const ref = doc(db, "clicks", name);
-    await updateDoc(ref, {
-      count: increment(1)
-    });
+    window.countClick = async function(name){
+  try{
+    const ref=doc(db,"clicks",name);
+    await updateDoc(ref,{count:increment(1)});
+    const snap=await getDoc(ref);
+    const el=document.getElementById("count-"+name);
+    if(el) el.innerText=snap.data().count+"+";
+  }catch(e){console.error(e);}
+});
   } catch (e) {
     console.error(e);
   }
