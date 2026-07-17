@@ -145,15 +145,14 @@ font-size:16px;font-weight:700;color:#FFD700;
 }
 @media(max-width:600px){
 .stats{grid-template-columns:repeat(2,1fr)}
-}
-   /* تصميم الأيقونة الذهبية الاحترافية */
+}/* تصميم الأيقونة الذهبية الاحترافية */
 .designer-badge {
     display: inline-block;
     margin-top: 15px;
     text-decoration: none;
     background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     background-size: 400% 400%;
-    padding: 10px 22px;
+    padding: 10px 20px; /* تقليل الحشو الجانبي قليلاً لتوفير مساحة */
     border-radius: 50px;
     color: #111 !important;
     font-size: 15px;
@@ -164,20 +163,30 @@ font-size:16px;font-weight:700;color:#FFD700;
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 215, 0, 0.4);
     animation: goldShimmer 6s linear infinite;
+    white-space: nowrap; /* يمنع النص تماماً من الانقسام لسطرين */
 }
 
 .badge-content {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 6px;
 }
 
 .designer-badge i {
-    font-size: 14px;
+    font-size: 13px;
     animation: pulseIcon 2s infinite;
 }
 
-/* تأثير اللمعان والتحريك الجاذب للانتباه */
+/* التوافق مع شاشات الموبايل الصغيرة جداً */
+@media(max-width: 400px) {
+    .designer-badge {
+        font-size: 13px; /* تصغير الخط قليلاً ليناسب الشاشات الضيقة ويظهر بالكامل */
+        padding: 8px 16px;
+    }
+}
+
+/* تأثير اللمعان والتحريك */
 @keyframes goldShimmer {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -192,7 +201,7 @@ font-size:16px;font-weight:700;color:#FFD700;
 
 /* تأثير عند تمرير الماوس أو الضغط */
 .designer-badge:hover {
-    transform: translateY(-4px) scale(1.04);
+    transform: translateY(-4px) scale(1.02);
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
     filter: brightness(1.1);
 }
