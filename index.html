@@ -76,12 +76,56 @@ position:absolute;
 top:0;left:0;width:100%;height:100%;
 }
 .links{display:flex;flex-direction:column;gap:12px}
-.btn{
-text-decoration:none;color:#fff;padding:14px 18px;border-radius:18px;
-display:flex;align-items:center;gap:15px;font-weight:700;transition:.3s;
+.links{
+display:flex;
+flex-direction:column;
+gap:12px;
 }
-.btn:hover{transform:translateY(-4px) scale(1.02)}
+
+.btn{
+text-decoration:none;
+color:#fff;
+padding:14px 18px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+}
+
+.btn .left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
 .btn i{
+width:48px;
+height:48px;
+border-radius:50%;
+background:#fff;
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.counter{
+background:#fff;
+color:#111;
+padding:5px 12px;
+border-radius:999px;
+font-size:14px;
+font-weight:800;
+min-width:55px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
 width:48px;height:48px;border-radius:50%;
 background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
 }
@@ -155,7 +199,23 @@ onclick="countClick('cv')">
 class="btn whatsapp"
 target="_blank"
 onclick="countClick('whatsapp')">
-<i class="fab fa-whatsapp"></i>واتساب
+
+<div class="left">
+<i class="fab fa-whatsapp"></i>
+<span>واتساب</span>
+</div>
+
+<span class="counter" id="count-whatsapp">326+</span>
+
+</a>
+
+<div class="left">
+<i class="fab fa-whatsapp"></i>
+<span>واتساب</span>
+</div>
+
+<span class="counter" id="count-whatsapp">326+</span>
+
 </a>
 
 <a href="https://www.facebook.com/share/1Ky8RTCpeX/"
@@ -242,6 +302,41 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+    async function loadClicks(){
+
+const names=[
+"whatsapp",
+"facebook",
+"instagram",
+"youtube",
+"snapchat",
+"x",
+"tiktok",
+"email",
+"cv"
+];
+
+for(const name of names){
+
+const snap=await getDoc(doc(db,"clicks",name));
+
+if(snap.exists()){
+
+const el=document.getElementById("count-"+name);
+
+if(el){
+
+el.innerText=snap.data().count+"+";
+
+}
+
+}
+
+}
+
+}
+
+window.loadClicks=loadClicks;
     window.countClick = async function(name) {
   try {
     const ref = doc(db, "clicks", name);
@@ -262,6 +357,7 @@ await updateDoc(ref, {
 const snap = await getDoc(ref);
 
 document.getElementById("visitors").innerText = snap.data().count;
+    await loadClicks();
 </script>
     
 </body>
