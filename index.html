@@ -233,11 +233,18 @@ onclick="countClick('instagram')">
 <span class="counter" id="count-instagram">0+</span>
 </a>
 
-<a href="https://www.youtube.com/@ali_alghzali_coach"
+<a href="https://www.youtube.com/@ali_alghazali_coach"
 class="btn youtube"
 target="_blank"
 onclick="countClick('youtube')">
-<i class="fab fa-youtube"></i>يوتيوب
+
+<div class="left">
+<i class="fab fa-youtube"></i>
+<span>يوتيوب</span>
+</div>
+
+<span class="counter" id="count-youtube">421+</span>
+
 </a>
 
 <a href="https://www.snapchat.com/add/ghazaly1532?share_id=EfBW8cI01jc&locale=ar-SA"
@@ -309,7 +316,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBgXvi7GAJaJK9JguyUpQ-IoeB8WkJFvF0",
+  apiKey: "YOUR_API_KEY",
   authDomain: "ali-alghazali.firebaseapp.com",
   projectId: "ali-alghazali",
   storageBucket: "ali-alghazali.firebasestorage.app",
@@ -319,66 +326,71 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-    async function loadClicks(){
 
-const names=[
-"whatsapp",
-"facebook",
-"instagram",
-"youtube",
-"snapchat",
-"x",
-"tiktok",
-"email",
-"cv"
-];
+async function loadClicks() {
 
-for(const name of names){
+  const names = [
+    "cv",
+    "whatsapp",
+    "facebook",
+    "instagram",
+    "youtube",
+    "snapchat",
+    "x",
+    "tiktok",
+    "email"
+  ];
 
-const snap=await getDoc(doc(db,"clicks",name));
+  for (const name of names) {
 
-if(snap.exists()){
+    const snap = await getDoc(doc(db, "clicks", name));
 
-const el=document.getElementById("count-"+name);
+    if (snap.exists()) {
 
-if(el){
+      const el = document.getElementById("count-" + name);
 
-el.innerText=snap.data().count+"+";
+      if (el) {
+        el.innerText = snap.data().count + "+";
+      }
 
-}
-
-}
-
-}
-
-}
-
-window.loadClicks=loadClicks;
-    window.countClick = async function(name){
-  try{
-    const ref=doc(db,"clicks",name);
-    await updateDoc(ref,{count:increment(1)});
-    const snap=await getDoc(ref);
-    const el=document.getElementById("count-"+name);
-    if(el) el.innerText=snap.data().count+"+";
-  }catch(e){console.error(e);}
-});
-  } catch (e) {
-    console.error(e);
-  }
     }
 
-const ref = doc(db, "stats", "visits");
+  }
 
-await updateDoc(ref, {
-  count: increment(1)
+}
+
+window.countClick = async function(name){
+
+  const ref = doc(db,"clicks",name);
+
+  await updateDoc(ref,{
+      count:increment(1)
+  });
+
+  const snap = await getDoc(ref);
+
+  const el=document.getElementById("count-"+name);
+
+  if(el){
+      el.innerText=snap.data().count+"+";
+  }
+
+}
+
+const visitRef = doc(db,"stats","visits");
+
+await updateDoc(visitRef,{
+    count:increment(1)
 });
 
-const snap = await getDoc(ref);
+const visitSnap = await getDoc(visitRef);
 
-document.getElementById("visitors").innerText = snap.data().count;
-    await loadClicks();
-</script>
+document.getElementById("visitors").innerText =
+visitSnap.data().count;
+
+await loadClicks();
+
+     </script>
     
 </body>
 </html>
