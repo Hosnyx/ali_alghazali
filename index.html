@@ -193,19 +193,38 @@ class="btn email" target="_blank">
 
 </div>
 
-<script>
-const namespace = "hosnyx";
-const key = "ali-alghazali-profile";
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  updateDoc,
+  increment
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("visitors").innerText = data.value;
-  })
-  .catch(error => {
-    console.error(error);
-    document.getElementById("visitors").innerText = "--";
-  });
+const firebaseConfig = {
+  apiKey: "AIzaSyBgXvi7GAJaJK9JguyUpQ-IoeB8WkJFvF0",
+  authDomain: "ali-alghazali.firebaseapp.com",
+  projectId: "ali-alghazali",
+  storageBucket: "ali-alghazali.firebasestorage.app",
+  messagingSenderId: "786288808558",
+  appId: "1:786288808558:web:c668d8880662986dc00c7f"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const ref = doc(db, "stats", "visits");
+
+await updateDoc(ref, {
+  count: increment(1)
+});
+
+const snap = await getDoc(ref);
+
+document.getElementById("visitors").innerText = snap.data().count;
 </script>
+    
 </body>
 </html>
